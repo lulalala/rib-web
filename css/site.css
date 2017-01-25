@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+.top-nav {
+    margin-top: 10px;
+}
+
+header {
+  margin: 0 0 6em;
+}
+header h1 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 72px;
+  text-align: center;
+}
+header h1 small {
+    font-family: sans-serif;
+  color: grey;
+  text-align: center;
+  font-size: 24px;
+    display:block;
+    margin-top: 10px;
+}
+
+.key-benefits h3 {
+   margin-top: 0;
+}
+
+.key-benefits .row {
+    margin-bottom: 2em;
+}
+
+.usage code {
+  font-size: 20px;
+  font-family: "courier",monospace;
+  font-weight: bold;
+    display: inline-block;
+    background-color: black;
+    color: yellow;
+    margin: 5px;
+    padding: 0 10px;
+}
+
+.usage code.gem-install {
+  margin: 0 auto;
+margin-bottom: 1em;
+
+  padding: 10px 30px;
+  border-radius: 10px;
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>rib - a lightweight and extensible irb replacement</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="components/octicons/build/font/octicons.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="top-nav container">
+    <nav class="pull-right">
+        <a class="github-button"
+           href="https://github.com/godfat/rib"
+           data-icon="octicon-mark-github"
+           data-style="mega"
+           data-text="View on Github"
+           aria-label="View on Github"
+        >View on Github</a>
+        <a class="github-button" href="https://github.com/godfat/rib" data-icon="octicon-star" data-style="mega" data-count-href="/godfat/rib/stargazers" data-count-api="/repos/godfat/rib#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godfat/rib on GitHub">Star</a>
+    </nav>
+</div>
+
+<header>
+    <div class="container">
+        <h1>
+            🍖rib
+            <small>A lightweight and extensible irb replacement</small>
+        </h1>
+
+    </div>
+</header>
+
+<div class="container key-benefits">
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h3 class="section-heading">Lightweight compare to pry or irb</h3>
+            <p class="lead">Less lines of code, and starts faster</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>rib</th>
+                    <th>irb</th>
+                    <th>pry</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>lines of code</td>
+                    <td>1500</td>
+                    <td>4500</td>
+                    <td>9000</td>
+                </tr>
+                <tr>
+                    <td>launch time (ms)</td>
+                    <td>0.39</td>
+                    <td>1.00</td>
+                    <td>0.82</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h3 class="section-heading">Modular, extensible, and lots of plugins</h3>
+            <p class="lead">Customization</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            Here is a selection of plugins:
+            <ul>
+                <li>completion</li>
+                <li>history</li>
+                <li>multiline</li>
+                <li>readline</li>
+                <li>strip backtrace</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h3 class="section-heading">Less complexity and less bugs</h3>
+            <p class="lead"></p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>
+                rib uses Ruby's internal lexical parser, while irb implements a separate parser.<br/>
+                This make rib behaves more faithful to Ruby and has less bugs.<br/>
+                For example, in irb, you can't <a href="https://bugs.ruby-lang.org/issues/12177">use `:if` symbol key in hash</a>, but in rib you can.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container usage">
+
+    <h2>Usage</h2>
+    <code class="gem-install">gem install rib</code>
+
+    <p>
+        Then you can start the shell by calling: <code>rib</code>
+
+        If you use Rails, then call: <code>rib rails</code>
+    </p>
+
+</div>
+
+<div class="container">
+    <h2>About</h2>
+    <p>@godfat have developed a collection of ripl plugins (https://github.com/godfat/ripl-rc), and contributed to ripl. Due to personal needs, he Based on ripl, rib</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>
