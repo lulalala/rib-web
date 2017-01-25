@@ -1,5 +1,11 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
 }
 
 .top-nav {
@@ -7,24 +13,24 @@ html {
 }
 
 header {
-  margin: 0 0 6em;
+    margin: 0 0 6em;
 }
 header h1 {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  font-size: 72px;
-  text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 72px;
+    text-align: center;
 }
 header h1 small {
     font-family: sans-serif;
-  color: grey;
-  text-align: center;
-  font-size: 24px;
+    color: grey;
+    text-align: center;
+    font-size: 24px;
     display:block;
     margin-top: 10px;
 }
 
 .key-benefits h3 {
-   margin-top: 0;
+    margin-top: 0;
 }
 
 .key-benefits .row {
@@ -32,9 +38,9 @@ header h1 small {
 }
 
 .usage code {
-  font-size: 20px;
-  font-family: "courier",monospace;
-  font-weight: bold;
+    font-size: 20px;
+    font-family: "courier",monospace;
+    font-weight: bold;
     display: inline-block;
     background-color: black;
     color: yellow;
@@ -42,10 +48,18 @@ header h1 small {
     padding: 0 10px;
 }
 
-.usage code.gem-install {
-  margin: 0 auto;
-margin-bottom: 1em;
+.install {
+    text-align: center;
+}
 
-  padding: 10px 30px;
-  border-radius: 10px;
+.usage code.gem-install {
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.usage .btn {
+    height: 50px;
+    border-radius: 10px;
 }

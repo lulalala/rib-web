@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="components/octicons/build/font/octicons.min.css">
     <link rel="stylesheet" href="css/site.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/clipboard.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -111,21 +112,27 @@
     </div>
 </div>
 <div class="container usage">
+    <div class="install">
+        <code class="gem-install">gem install rib</code>
+        <button class="btn" data-clipboard-text="gem install rib">Copy</button>
+    </div>
 
-    <h2>Usage</h2>
-    <code class="gem-install">gem install rib</code>
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Usage</h2>
 
-    <p>
-        Then you can start the shell by calling: <code>rib</code>
+      <p>
+          After install, you can start the shell by calling: <code>rib</code>
 
-        If you use Rails, then call: <code>rib rails</code>
-    </p>
-
+          If you use Rails, then call: <code>rib rails</code>
+      </p>
+  </div>
 </div>
 
 <div class="container">
-    <h2>About</h2>
-    <p>@godfat have developed a collection of ripl plugins (https://github.com/godfat/ripl-rc), and contributed to ripl. Due to personal needs, he Based on ripl, rib</p>
+    <div class="col-md-10 col-md-offset-1">
+        <h2>About</h2>
+        <p>@godfat have developed a collection of ripl plugins (https://github.com/godfat/ripl-rc), and contributed to ripl. Due to personal needs, he Based on ripl, rib</p>
+    </div>
 </div>
 
 
@@ -133,6 +140,7 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="js/vendor/clipboard.min.js"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
