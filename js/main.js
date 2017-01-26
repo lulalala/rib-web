@@ -18,6 +18,6 @@ clipboard.on('success', function(e) {
     $(".gem-install").fadeTo(100, 0.5, function() { $(this).fadeTo(500, 1.0); });
 });
 
-$('.github-button').on('click', function(){
+$('.github-button, .readme').on('click', function(){
     mixpanel.track("hit");
 });
