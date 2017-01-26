@@ -63,3 +63,10 @@ header h1 small {
     height: 50px;
     border-radius: 10px;
 }
+
+footer {
+    margin-top: 3em;
+    margin-bottom: 0.6em;
+    text-align: center;
+    color: #888888;
+}
