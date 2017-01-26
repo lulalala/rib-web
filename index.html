@@ -104,9 +104,10 @@
         </div>
         <div class="col-lg-6 col-sm-6">
             <p>
-                rib uses Ruby's internal lexical parser, while irb implements a separate parser.<br/>
-                This make rib behaves more faithful to Ruby and has less bugs.<br/>
-                For example, in irb, you can't <a href="https://bugs.ruby-lang.org/issues/12177">use `:if` symbol key in hash</a>, but in rib you can.
+                Utilize Ruby's build-in lexical parser,<br/>
+                (whereas irb implements a separate parser)<br/>
+                therefore more faithful to Ruby and hopefully less bugs.<br/>
+                For example, try pasting <code>{if: 52}</code> into rib and irb <sup><a href="https://bugs.ruby-lang.org/issues/12177">(issue)</a></sup>
             </p>
         </div>
     </div>
