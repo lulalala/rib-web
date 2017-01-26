@@ -15,6 +15,7 @@ var clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
     mixpanel.track("hit");
+    $(".gem-install").fadeTo(100, 0.5, function() { $(this).fadeTo(500, 1.0); });
 });
 
 $('.github-button').on('click', function(){
