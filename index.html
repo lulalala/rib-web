@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>rib - a lightweight and extensible irb replacement</title>
+    <title>Rib - A lightweight and extensible irb replacement</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,9 +29,9 @@
            href="https://github.com/godfat/rib"
            data-icon="octicon-mark-github"
            data-style="mega"
-           data-text="View on Github"
-           aria-label="View on Github"
-        >View on Github</a>
+           data-text="View on GitHub"
+           aria-label="View on GitHub"
+        >View on GitHub</a>
         <a class="github-button" href="https://github.com/godfat/rib" data-icon="octicon-star" data-style="mega" data-count-href="/godfat/rib/stargazers" data-count-api="/repos/godfat/rib#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godfat/rib on GitHub">Star</a>
     </nav>
 </div>
@@ -39,7 +39,7 @@
 <header>
     <div class="container">
         <h1>
-            🍖rib
+            🍖Rib
             <small>A lightweight and extensible irb replacement</small>
         </h1>
 
@@ -49,8 +49,8 @@
 <div class="container key-benefits">
     <div class="row">
         <div class="col-lg-6 col-sm-6">
-            <h3 class="section-heading">Lightweight compare to pry or irb</h3>
-            <p class="lead">Less lines of code, and starts faster</p>
+            <h3 class="section-heading">Lightweight comparing to alternatives</h3>
+            <p class="lead">Less codes, launches faster</p>
         </div>
         <div class="col-lg-6 col-sm-6">
             <table class="table">
@@ -64,16 +64,20 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>lines of code</td>
+                    <td>Lines of code</td>
                     <td>1500</td>
                     <td>4500</td>
                     <td>9000</td>
                 </tr>
                 <tr>
-                    <td>launch time (ms)</td>
+                    <td>Launch time (ms)</td>
                     <td>377.5</td>
                     <td>867.2</td>
                     <td>891.3</td>
+                </tr>
+                <tr>
+                  <td colspan="4"
+                    style="text-align:right">Data on 2017-01-25</td>
                 </tr>
                 </tbody>
             </table>
@@ -82,36 +86,36 @@
 
     <div class="row">
         <div class="col-lg-6 col-sm-6">
-            <h3 class="section-heading">Extensible and customizable</h3>
-            <p class="lead">Modular therefore customizable,<br/> with lots of plugins</p>
+            <h3 class="section-heading">Easy extensible</h3>
+            <p class="lead">Use built-in plugins or write your own</p>
         </div>
         <div class="col-lg-6 col-sm-6">
-            Since it is extensible you write plugins to suit your needs.
+            Here's a small list of some more special built-in plugins:
             <ul>
-                <li>completion</li>
-                <li>history</li>
-                <li>multiline</li>
-                <li>readline</li>
-                <li>strip backtrace</li>
+                <li>Multiline history</li>
+                <li>Bottom up backtrace</li>
+                <li>In-place editing</li>
+                <li>Auto-indention</li>
+                <li>Output pagination</li>
             </ul>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-6 col-sm-6">
-            <h3 class="section-heading">Less complexity and less bugs</h3>
-            <p class="lead"></p>
+            <h3 class="section-heading">Less complex</h3>
+            <p class="lead">Therefore less likely to have bugs</p>
         </div>
         <div class="col-lg-6 col-sm-6">
             <p>
-                Utilize Ruby's build-in lexical parser,<br/>
-                (whereas irb implements a separate parser)<br/>
-                therefore more faithful to Ruby and hopefully less bugs.<br/>
-                For example, try pasting <code>{if: 52}</code> into rib and irb <sup><a href="https://bugs.ruby-lang.org/issues/12177">(issue)</a></sup>
+                Utilize Ruby's parser directly instead of a separate parser like irb,
+                therefore less likely to evaluate differently.
+                For example, evaluating <code>{if: 42}</code> in irb was broken once <sup><a href="https://bugs.ruby-lang.org/issues/12177">(issue)</a></sup>
             </p>
         </div>
     </div>
 </div>
+
 <div class="container usage">
     <div class="install">
         <code class="gem-install">gem install rib</code>
@@ -122,22 +126,56 @@
       <h2>Usage</h2>
 
       <p>
-          After install, you can start the shell by calling: <code>rib</code>
-
-          If you use Rails, then call: <code>rib rails</code>
+          Start the shell by running <code>rib</code>
+          If you need Rails console, then run <code>rib rails</code>
+          If you need Rack console, then run <code>rib rack</code>
+          You could also run <code>rib auto</code> for detecting application.
       </p>
-  </div>
+    </div>
+
+    <div class="col-md-10 col-md-offset-1">
+      <h2>asciicast</h2>
+
+      <p>
+          <script type="text/javascript" src="https://asciinema.org/a/45rplimr59i0pdg9tq6nkm3at.js" id="asciicast-45rplimr59i0pdg9tq6nkm3at" async></script>
+      </p>
+    </div>
+
+    <div class="col-md-10 col-md-offset-1">
+      <h2>rib -h</h2>
+
+      <pre>
+Usage: rib [ruby OPTIONS] [rib OPTIONS] [rib COMMANDS]
+ruby options:
+  -e, --eval LINE        Evaluate a LINE of code
+  -d, --debug            Set debugging flags (set $DEBUG to true)
+  -w, --warn             Turn warnings on (set $-w and $VERBOSE to true)
+  -I, --include PATH     Specify $LOAD_PATH (may be used more than once)
+  -r, --require LIBRARY  Require the library, before executing your script
+rib options:
+  -c, --config FILE      Load config from FILE
+  -p, --prefix PATH      Prefix to locate the app. Default to .
+  -n, --no-config        Suppress loading any config
+  -h, --help             Print this message
+  -v, --version          Print the version
+rib commands:
+  all                    Load all recommended plugins
+  auto                   Run as Rails or Rack console (auto-detect)
+  min                    Run the minimum essence
+  rack                   Run as Rack console
+  rails                  Run as Rails console</pre>
+    </div>
 </div>
 
 <div class="container">
     <div class="col-md-10 col-md-offset-1">
         <h2>About</h2>
-        <p>rib started in 2011, and has been maintained constantly. It aims to be light, while being customizable so you can extend it to suit your needs. Though it is small, it actually offers a lot more functionalities such as debugging, in-place editing and more. Check out the <a href="https://github.com/godfat/rib" class="readme">README</a> for more details.</p>
+        <p>Rib started in 2011 and has been maintained since then. It aims to be lightweight and extensible so it could work for anyone. It's minimal in its core, but it still offers a lot more features such as debugging, in-place editing and more via built-in plugins. Check out <a href="https://github.com/godfat/rib" class="readme">README</a> for more details.</p>
     </div>
 </div>
 
 <footer>
-    <div class="container">Maintained by <a href="https://twitter.com/godfat">@godfat</a>, Apache License 2.0</div>
+    <div class="container">Maintained by <a href="https://twitter.com/godfat">@godfat</a>, Apache License 2.0. Website designed by <a href="https://twitter.com/lulalala_it">@lulalala_it</a></div>
 </footer>
 
 
