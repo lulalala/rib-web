@@ -16,7 +16,7 @@ header {
     margin: 0 0 6em;
 }
 header h1 {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans", monospace;
     font-size: 72px;
     text-align: center;
 }
