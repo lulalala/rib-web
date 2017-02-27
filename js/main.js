@@ -11,6 +11,8 @@ ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 
 mixpanel.init("0a77f7c6f943177c710450e926febaec");
 
+mixpanel.track('visit');
+
 var clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
