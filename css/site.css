@@ -64,6 +64,13 @@ header h1 small {
     border-radius: 10px;
 }
 
+.demo >p {
+    background: #000;
+}
+.demo >p >.asciicast {
+  text-align: center;
+}
+
 footer {
     margin-top: 3em;
     margin-bottom: 0.6em;
