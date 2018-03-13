@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    godfat -- maintainer -- @godfat
 
 # THANKS
 
-    <name>
+    lulalala -- site design -- @lulalala_it
 
 # TECHNOLOGY COLOPHON
 
