@@ -4,6 +4,14 @@
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+activate :minify_html
+activate :gzip
+activate :blog do |blog|
+  blog.prefix = "tips"
+  blog.layout = "tips"
+  blog.calendar_template = "tips/calendar.html"
+  blog.tag_template = "tips/tag.html"
+end
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -40,7 +48,7 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
