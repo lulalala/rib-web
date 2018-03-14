@@ -1,62 +1,76 @@
-html
-  box-sizing: border-box
+body.index
 
-@media(min-width: 1200px)
-  .container
-    max-width: 970px
+  @media(min-width: 992px)
+    .container
+      max-width: 780px
 
+  html
+    font-size: 87.5%
 
-.top-nav
-  margin-top: 10px
-
-header
-  margin: 0 0 6em
-  h1
-    font-family: Comic Sans MS, Comic Sans, monospace
-    font-size: 72px
-    text-align: center
-    small
-      font-family: sans-serif
-      color: grey
+  header
+    margin: 0 0 6em
+    h1
+      font-family: Comic Sans MS, Comic Sans, monospace
+      font-size: 72px
       text-align: center
-      font-size: 24px
-      display: block
-      margin-top: 10px
-
-
-
-.key-benefits
-  h3
-    margin-top: 0
+      small
+        font-family: sans-serif
+        color: grey
+        font-size: 24px
+        display: block
+        margin-top: 10px
 
   .row
-    margin-bottom: 2em
+    justify-content: center
 
+  .key-benefits
+    .row
+      margin-bottom: 2em
 
-.usage
-  code
-    font-size: 20px
-    font-family: courier, monospace
-    font-weight: bold
-    display: inline-block
-    background-color: black
-    color: yellow
-    margin: 5px
-    padding: 0 10px
-    &.gem-install
-      margin: 0 auto
-      margin-bottom: 1em
-      padding: 10px 30px
+    ul
+      padding-left: 1.2em
+
+    table.comparison
+      .note
+        text-align: right
+        color: #6c757d
+
+  .usage
+    code
+      font-size: 20px
+      font-family: courier, monospace
+      font-weight: bold
+      display: inline-block
+      background-color: black
+      color: yellow
+      margin: 5px
+      padding: 0 10px
+      &.gem-install
+        margin: 0 auto
+        margin-bottom: 1em
+        padding: 10px 30px
+        border-radius: 10px
+
+    .btn
+      height: 50px
       border-radius: 10px
 
+    > div
+      margin-bottom: 1.5em
 
-  .btn
-    height: 50px
-    border-radius: 10px
+    .install
+      text-align: center
 
+    .demo > p
+      background: #000
+      > .asciicast
+        text-align: center
 
-.install
-  text-align: center
+    pre
+      border: 1px solid #ccc
+      border-radius: 4px
+      padding: 2em
+      font-size: 1rem
 
 footer
   margin-top: 3em
@@ -64,7 +78,3 @@ footer
   text-align: center
   color: #888888
 
-.demo > p
-  background: #000
-  > .asciicast
-    text-align: center

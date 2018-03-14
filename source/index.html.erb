@@ -1,8 +1,18 @@
 ---
 title: Rib - A lightweight and extensible irb replacement
+type: index
 ---
-<div class="top-nav container">
-  <nav class="pull-right">
+<nav class="navbar navbar-expand-md">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/blog">Tips</a>
+    </li>
+  </ul>
+
+  <div class="d-inline-flex">
     <a class="github-button"
        href="https://github.com/godfat/rib"
        data-icon="octicon-mark-github"
@@ -11,118 +21,120 @@ title: Rib - A lightweight and extensible irb replacement
        aria-label="View on GitHub"
     >View on GitHub</a>
     <a class="github-button" href="https://github.com/godfat/rib" data-icon="octicon-star" data-style="mega" data-count-href="/godfat/rib/stargazers" data-count-api="/repos/godfat/rib#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godfat/rib on GitHub">Star</a>
-  </nav>
-</div>
+  </div>
+</nav>
 
 <header>
-  <div class="container">
-    <h1>
-      🍖Rib
-      <small>A lightweight and extensible irb replacement</small>
-    </h1>
-
-  </div>
+  <h1>
+    🍖Rib
+    <small>A lightweight and extensible irb replacement</small>
+  </h1>
 </header>
 
-<div class="container key-benefits">
-  <div class="row">
-    <div class="col-lg-6 col-sm-6">
-      <h3 class="section-heading">Lightweight comparing to alternatives</h3>
-      <p class="lead">Less codes, launches faster</p>
+<div class="container">
+  <div class="key-benefits">
+    <div class="row">
+      <div class="col-md-5">
+        <h3 class="section-heading">Lightweight</h3>
+        <p class="lead">Less code, launch faster</p>
+      </div>
+      <div class="col-md-7">
+        <table class="table comparison">
+          <thead>
+          <tr>
+            <th></th>
+            <th>rib</th>
+            <th>irb</th>
+            <th>pry</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Lines of code</td>
+            <td>1500</td>
+            <td>4500</td>
+            <td>9000</td>
+          </tr>
+          <tr>
+            <td>Launch time (ms)</td>
+            <td>377.5</td>
+            <td>867.2</td>
+            <td>891.3</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="note">Data on 2017-01-25</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="col-lg-6 col-sm-6">
-      <table class="table">
-        <thead>
-        <tr>
-          <th></th>
-          <th>rib</th>
-          <th>irb</th>
-          <th>pry</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Lines of code</td>
-          <td>1500</td>
-          <td>4500</td>
-          <td>9000</td>
-        </tr>
-        <tr>
-          <td>Launch time (ms)</td>
-          <td>377.5</td>
-          <td>867.2</td>
-          <td>891.3</td>
-        </tr>
-        <tr>
-          <td colspan="4"
-              style="text-align:right">Data on 2017-01-25</td>
-        </tr>
-        </tbody>
-      </table>
+
+    <div class="row">
+      <div class="col-md-5">
+        <h3 class="section-heading">Easily extensible</h3>
+        <p class="lead">Use built-in plugins or write your own</p>
+      </div>
+      <div class="col-md-7">
+        Here's a small list of some special built-in plugins:
+        <ul>
+          <li>Multiline history</li>
+          <li>Bottom up backtrace</li>
+          <li>In-place editing</li>
+          <li>Auto-indention</li>
+          <li>Output pagination</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        <h3 class="section-heading">Less complex</h3>
+        <p class="lead">Therefore less likely to have bugs</p>
+      </div>
+      <div class="col-md-7">
+        <p>
+          Utilize Ruby's parser directly instead of a separate parser like irb,
+          therefore less likely to behave differently.
+          For example, evaluating <code>{if: 42}</code> in irb was once broken <sup><a href="https://bugs.ruby-lang.org/issues/12177">(issue)</a></sup>
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-lg-6 col-sm-6">
-      <h3 class="section-heading">Easy extensible</h3>
-      <p class="lead">Use built-in plugins or write your own</p>
+  <div class="usage">
+    <div class="install">
+      <code class="gem-install">gem install rib</code>
+      <button class="btn btn-warning" data-clipboard-text="gem install rib">Copy</button>
     </div>
-    <div class="col-lg-6 col-sm-6">
-      Here's a small list of some more special built-in plugins:
-      <ul>
-        <li>Multiline history</li>
-        <li>Bottom up backtrace</li>
-        <li>In-place editing</li>
-        <li>Auto-indention</li>
-        <li>Output pagination</li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-lg-6 col-sm-6">
-      <h3 class="section-heading">Less complex</h3>
-      <p class="lead">Therefore less likely to have bugs</p>
-    </div>
-    <div class="col-lg-6 col-sm-6">
-      <p>
-        Utilize Ruby's parser directly instead of a separate parser like irb,
-        therefore less likely to evaluate differently.
-        For example, evaluating <code>{if: 42}</code> in irb was broken once <sup><a href="https://bugs.ruby-lang.org/issues/12177">(issue)</a></sup>
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="container usage">
-  <div class="install">
-    <code class="gem-install">gem install rib</code>
-    <button class="btn btn-warning" data-clipboard-text="gem install rib">Copy</button>
-  </div>
-
-  <div class="col-md-10 col-md-offset-1">
     <h2>Usage</h2>
+    <p>Start the shell by:</p>
 
-    <p>
-      Start the shell by running <code>rib</code>
-      If you need Rails console, then run <code>rib rails</code>
-      If you need Rack console, then run <code>rib rack</code>
-      You could also run <code>rib auto</code> for detecting application.
-    </p>
-  </div>
+    <div class="row">
+      <div class="col-md">
+        <code>rib</code> Pure ruby console<br/>
+        <code>rib rails</code> Rails console<br/>
+      </div>
+      <div class="col-md">
+        <code>rib rack</code> Rack console<br/>
+        <code>rib auto</code> for auto detecting application
+      </div>
+    </div>
 
-  <div class="demo col-md-10 col-md-offset-1">
-    <h2>asciicast</h2>
+    <div class="demo">
+      <h2>Asciicast</h2>
 
-    <p>
-      <script type="text/javascript" src="https://asciinema.org/a/45rplimr59i0pdg9tq6nkm3at.js" id="asciicast-45rplimr59i0pdg9tq6nkm3at" async></script>
-    </p>
-  </div>
+      <p>
+        <script type="text/javascript" src="https://asciinema.org/a/45rplimr59i0pdg9tq6nkm3at.js" id="asciicast-45rplimr59i0pdg9tq6nkm3at" async></script>
+      </p>
 
-  <div class="col-md-10 col-md-offset-1">
-    <h2>rib -h</h2>
+      <div>Try <code>rib all</code> to enable almost all built-in plugins for above example.</div>
+    </div>
 
-    <pre>
+    <div>
+      <h2>rib -h</h2>
+
+      <pre>
 Usage: rib [ruby OPTIONS] [rib OPTIONS] [rib COMMANDS]
 ruby options:
   -e, --eval LINE        Evaluate a LINE of code
@@ -142,11 +154,10 @@ rib commands:
   min                    Run the minimum essence
   rack                   Run as Rack console
   rails                  Run as Rails console</pre>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="col-md-10 col-md-offset-1">
+  <div>
     <h2>About</h2>
     <p>Rib started in 2011 and has been maintained since then. It aims to be lightweight and extensible so it could work for anyone. It's minimal in its core, but it still offers a lot more features such as debugging, in-place editing and more via built-in plugins. Check out <a href="https://github.com/godfat/rib" class="readme">README</a> for more details.</p>
   </div>
@@ -159,7 +170,7 @@ rib commands:
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 <script src="javascripts/plugins.js"></script>
-<script src="javascripts/main.js"></script>
 <script src="javascripts/vendor/clipboard.min.js"></script>
+<script src="javascripts/main.js"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
